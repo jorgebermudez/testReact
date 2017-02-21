@@ -9,17 +9,7 @@ A boilerplate for React + Redux + Material UI + ES6 syntax applications. This bo
 * [ESLint](http://eslint.org/)
 
 
-# Usage
-## Preparation
-```bash
-$ git clone https://github.com/takanabe/react-redux-material_ui-boilerplate.git
-$ mv react-redux-material_ui-boilerplate [YOUR_APPNAME]
-$ cd [YOUR_APPNAME]
-$ rm -rf .git
-$ git init
-$ git add -A
-$ git commit -m "Initial commit with boilerplate"
-```
+
 
 ## Package installation
 ```bash
