@@ -3,8 +3,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
 import MainSection from '../components/MainSection';
-import VentaTable from '../components/VentaTable';
-
 import * as TodoActions from '../actions/todos';
 
 // For Customization Options, edit  or use
@@ -20,8 +18,8 @@ class App extends Component {
         //para que se vea lindo materials
         <MuiThemeProvider muiTheme={theme}>
           <div>
-            <Header />
-            <VentaTable id="99999"/>
+            <Header addTodo={actions.addTodo}/>
+            <MainSection todos={todos} actions={actions}/>
           </div>
         </MuiThemeProvider>
       </div>
