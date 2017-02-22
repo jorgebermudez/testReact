@@ -5,7 +5,11 @@ import Header from '../components/Header';
 import MainSection from '../components/MainSection';
 import VentaTable from '../components/VentaTable';
 
+
 import * as TodoActions from '../actions/todos';
+
+// implement router
+import RouterApp from '../routes/RouterApp';
 
 // For Customization Options, edit  or use
 // './src/material_ui_raw_theme_file.jsx' as a template.
@@ -17,11 +21,10 @@ class App extends Component {
     const { todos, actions } = this.props;
     return (
       <div>
-        //para que se vea lindo materials
         <MuiThemeProvider muiTheme={theme}>
           <div>
-            <Header />
-            <VentaTable id="99999"/>
+            <RouterApp/>
+            
           </div>
         </MuiThemeProvider>
       </div>
