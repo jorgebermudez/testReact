@@ -4,7 +4,8 @@ import {  BrowserRouter as Router,  Route,  Link} from 'react-router-dom';
 import FlatButton from 'material-ui/FlatButton';
 
 //Clases del menu
-import VentaTable from '../components/VentaTable';
+
+import VentaTable from '../containers/reportes'
 import Venta from '../containers/venta';
 
 export default class RouterApp extends Component {
