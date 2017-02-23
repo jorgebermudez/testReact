@@ -17,6 +17,11 @@ injectTapEventPlugin();
 
 const store = configureStore();
 
+//Linia que sirve para preguntar en cualquier momento que tiene el strore
+window._store = store.getState();
+
+console.log(store.getState());
+
 ReactDOM.render(
   <Provider store={store}>
     <App />

@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Header from '../components/Header';
 import MainSection from '../components/MainSection';
 import VentaTable from '../components/VentaTable';
 
@@ -19,12 +18,13 @@ import theme from '../src/material_ui_raw_theme_file'
 class App extends Component {
   render() {
     const { todos, actions } = this.props;
+    console.log(this.props);
     return (
       <div>
         <MuiThemeProvider muiTheme={theme}>
           <div>
-            <RouterApp/>
-            
+            <RouterApp addVenta={actions.addTodo}/>
+
           </div>
         </MuiThemeProvider>
       </div>
@@ -39,7 +39,9 @@ App.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    todos: state.todos
+    todos: state.todos,
+    ventas: state.ventas,
+    pagos: state.pagos
   };
 }
 

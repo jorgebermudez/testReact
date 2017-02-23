@@ -6,10 +6,26 @@ import VentaRow from './VentaRow.jsx'
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 
 export default class VentaTable extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
+    //form
+    this.state = {value: ''};
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    products.push({description: "SamsungGalaxi", price: "$49.99" , id:"1"})
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
   }
   render(){
+
+
     let products =
     [
       {description: "SamsungGalaxi", price: "$49.99" , id:"1"},
@@ -33,6 +49,13 @@ export default class VentaTable extends Component {
 
     return (
       <div>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
         <Table>
           <TableHeader>
             <TableRow>
