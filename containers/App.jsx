@@ -23,7 +23,7 @@ class App extends Component {
       <div>
         <MuiThemeProvider muiTheme={theme}>
           <div>
-            <RouterApp addVenta={actions.addTodo}/>
+            <RouterApp addVenta={actions}/>
 
           </div>
         </MuiThemeProvider>

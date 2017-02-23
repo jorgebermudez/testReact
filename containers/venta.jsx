@@ -9,21 +9,20 @@ class Venta extends Component {
     super(props);
     this.state = {
         description: '',
-        price: ''
+        price: '',
+        count: 83
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange(event) {
-    console.log("event", event)
-    console.log("event.target.name", event.target.name)
-    console.log("event.target.value", event.target.value)
     this.setState({[event.target.name]: event.target.value});
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.description +"--"+ this.state.price);
     event.preventDefault();
+    this.props.dispatch(TodoActions.addVenta(this.state.description,this.state.price));
+    alert('Se vendio : ' + this.state.description +" a un costo de "+ this.state.price);
   }
   render(){
     return(
@@ -33,12 +32,12 @@ class Venta extends Component {
               type="text"
               hintText="Descripcion"
               name="description"
-              onChange={this.handleChange.bind(this)}
+              onChange={this.handleChange}
           /><br/>
           <TextField
               type="text"  hintText="Precio"
               name="price"
-              onChange={this.handleChange.bind(this)}
+              onChange={this.handleChange}
           /><br/>
 
           <input type="submit" value="Submit" /><br/>
@@ -48,14 +47,15 @@ class Venta extends Component {
   }
 }
 
-// Mapea el State o store que con el proms
+// Mapea el State o store que con el props
 function mapStateToProps(state){
   return { ventas: state.ventas };
 }
+/*
 function mapDispatchToProps(dispatch) {
-  return { action: bindActionCreators(TodoActions, dispatch)};
-}
+  return { action: bindActionCreators(addVenta, dispatch)};
+}*/
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+//  mapDispatchToProps
 )(Venta)

@@ -12,7 +12,7 @@ export default function pagos(state = [], action) {
   switch(action.type) {
   case 'ADD_PAGO':
     // creamos una copia del state actual
-    const copy = Array.from(state);
+    let copy = Array.from(state);
     // modificamos lo que necesitamos
     copy.push({
               name: action.name,

@@ -1,7 +1,7 @@
 import * as types from '../constants/ActionTypes';
 
-export function addVenta(text) {
-  return { type: types.ADD_VENTA, description, price, id  };
+export function addVenta(description,price) {
+  return { type: types.ADD_VENTA, description, price  };
 }
 export function addTodo(text) {
   return { type: types.ADD_TODO, text };

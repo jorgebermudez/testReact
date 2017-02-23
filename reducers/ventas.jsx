@@ -17,7 +17,7 @@ export default function ventas(state = initialStateVentas, action) {
   switch(action.type) {
   case 'ADD_VENTA':
     // creamos una copia del state actual
-    const copy = Array.from(state);
+    let copy = Array.from(state);
     // modificamos lo que necesitamos
     copy.push({
               description: action.description,
