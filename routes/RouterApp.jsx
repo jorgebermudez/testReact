@@ -13,9 +13,9 @@ export default class RouterApp extends Component {
     super();
   }
   render(){
-    const Reporte = () => (
+    const Pagos = () => (
       <div>
-        <h2>Reporte</h2>
+        <h2>Pagos</h2>
       </div>
     )
     return(
@@ -23,16 +23,13 @@ export default class RouterApp extends Component {
         <div>
           <div>
             <FlatButton containerElement={<Link to="/" />} label="Venta" />
-            <FlatButton containerElement={<Link to="/ventas" />} label="Ventas" />
-            <FlatButton containerElement={<Link to="/reporte" />} label="Reporte" />
-
+            <FlatButton containerElement={<Link to="/reporte" />} label="Pagos" />
+            <FlatButton containerElement={<Link to="/ventas" />} label="Reportes" />
           </div>
-
           <hr/>
-
           <Route exact path="/" component={Venta}/>
           <Route path="/ventas" component={VentaTable}/>
-          <Route path="/reporte" component={Reporte}/>
+          <Route path="/pagos" component={Pagos}/>
         </div>
       </Router>
     );

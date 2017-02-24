@@ -29,8 +29,6 @@ export default class VentaTable extends Component {
     }else{
       rows.push(<h1>LOADING</h1>)
     }
-    console.log("This en table",this)
-
     return (
       <div>
         <Table>

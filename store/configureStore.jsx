@@ -2,7 +2,6 @@ import { createStore } from 'redux';
 // cargamos nuestros reducers (ya combinados) de reducers/index.js
 import rootReducer from '../reducers';
 
-
 export default function configureStore(initialState) {
   const store = createStore(
     rootReducer,
