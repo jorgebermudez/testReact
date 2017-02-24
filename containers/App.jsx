@@ -17,7 +17,6 @@ import theme from '../src/material_ui_raw_theme_file'
 class App extends Component {
   render() {
     const { todos, actions } = this.props;
-    console.log(this.props);
     return (
       <div>
         <MuiThemeProvider muiTheme={theme}>

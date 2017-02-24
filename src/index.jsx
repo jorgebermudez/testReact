@@ -19,8 +19,8 @@ const store = configureStore();
 
 //Linia que sirve para preguntar en cualquier momento que tiene el strore
 window._store = store.getState();
-// Muestro el estado del strore 
-console.log(store.getState());
+// Muestro el estado del strore
+//console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>
