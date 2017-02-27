@@ -72,7 +72,7 @@ class Pago extends Component {
               onChange={this.handleChange}
           /><br/>
           <TextField
-              type="text"  hintText="Precio"
+              type="number"  hintText="Precio"
               name="price"
               onChange={this.handleChange}
           /><br/>

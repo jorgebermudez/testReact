@@ -77,7 +77,7 @@ class Venta extends Component {
               onChange={this.handleChange}
           /><br/>
           <TextField
-              type="text"
+              type="number"
               hintText="Precio"
               name="price"
               onChange={this.handleChange}
