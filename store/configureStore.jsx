@@ -1,11 +1,16 @@
-import { createStore } from 'redux';
+import {compose, createStore } from 'redux';
+import persistState from 'redux-localstorage'// for local storage
 // cargamos nuestros reducers (ya combinados) de reducers/index.js
 import rootReducer from '../reducers';
 
 export default function configureStore(initialState) {
+  const enhancer = compose(
+    persistState(/*paths, config*/),
+  );
   const store = createStore(
     rootReducer,
     initialState,
+    enhancer,
     window.devToolsExtension ? window.devToolsExtension() : undefined
   );
 
