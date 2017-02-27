@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import VentaTable from '../components/VentaTable';
 
 
 import * as TodoActions from '../actions/todos';
