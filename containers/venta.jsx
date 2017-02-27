@@ -15,7 +15,6 @@ class Venta extends Component {
     this.state = {
         description: '',
         price: '',
-        count: 83,
         open: false, // para popup
         description_error_text: null,
         price_error_text: null
@@ -28,12 +27,17 @@ class Venta extends Component {
   handleClosePopUpCancel = () => {
     this.setState({open: false});
     console.log(this);
+    this.setState({description: ""});
+    this.setState({price: ""});
   };
 
   handleClosePopUpAccept = () => {
     let AuxPrecio = "$" + this.state.price ;
     this.props.dispatch(TodoActions.addVenta(this.state.description,AuxPrecio));
     this.setState({open: false});
+    this.setState({description: ""});
+    this.setState({price: ""});
+
   };
 
   handleChange(event) {
@@ -75,12 +79,14 @@ class Venta extends Component {
               hintText="Descripcion"
               errorText={this.state.description_error_text}
               onChange={this.handleChange}
+              value={this.state.description}
           /><br/>
           <TextField
               type="number"
               hintText="Precio"
               name="price"
               onChange={this.handleChange}
+              value={this.state.price}
           /><br/>
           <input type="submit" value="Submit" /><br/>
         </form>

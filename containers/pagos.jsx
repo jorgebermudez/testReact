@@ -15,7 +15,6 @@ class Pago extends Component {
     this.state = {
         description: '',
         price: '',
-        count: 83,
         open:false
       };
       this.handleChange = this.handleChange.bind(this);
@@ -24,6 +23,8 @@ class Pago extends Component {
   // Popup butons actions
   handleClosePopUpCancel = () => {
     this.setState({open: false});
+    this.setState({description: ""});
+    this.setState({price: ""});
     console.log(this);
   };
 
@@ -31,6 +32,8 @@ class Pago extends Component {
     let AuxPrecio = "$(" + this.state.price + ")";
     this.props.dispatch(TodoActions.addVenta(this.state.description, AuxPrecio ));
     this.setState({open: false});
+    this.setState({description: ""});
+    this.setState({price: ""});
   };
 
   handleChange(event) {
@@ -70,11 +73,13 @@ class Pago extends Component {
               hintText="Descripcion"
               name="description"
               onChange={this.handleChange}
+              value={this.state.description}
           /><br/>
           <TextField
               type="number"  hintText="Precio"
               name="price"
               onChange={this.handleChange}
+              value={this.state.price}
           /><br/>
 
           <input type="submit" value="Submit" /><br/>
