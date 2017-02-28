@@ -25,12 +25,17 @@ class VentaTable extends Component {
     }
     return (
       <div>
-        <Table>
-          <TableHeader>
+        <Table
+          selectable={false}
+          multiSelectable={false}
+          >
+          <TableHeader
+            displaySelectAll={false}
+            adjustForCheckbox={false}
+            >
             <TableRow>
               <TableHeaderColumn>description</TableHeaderColumn>
               <TableHeaderColumn>price</TableHeaderColumn>
-              <TableHeaderColumn>id</TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody>
