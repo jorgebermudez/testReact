@@ -76,6 +76,12 @@ class Venta extends Component {
       marginTop: 10,
       marginBottom: 10
     }
+    const stylePaper={
+      margin: 20,
+      textAlign: 'center',
+      display: 'inline-block'
+    }
+
     return(
       <div>
           <Dialog
@@ -88,7 +94,7 @@ class Venta extends Component {
           </Dialog>
 
         <form onSubmit={this.handleSubmit} style={style}>
-          <Paper zDepth={2}>
+          <Paper zDepth={2} style={stylePaper}>
 
 
 

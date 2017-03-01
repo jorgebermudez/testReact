@@ -3,6 +3,8 @@ import React, { PropTypes, Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
+import Divider from 'material-ui/Divider';
+import Paper from 'material-ui/Paper';
 
 //Modules created
 import * as TodoActions from '../actions/todos';
@@ -23,26 +25,35 @@ class VentaTable extends Component {
     }else{
       rows.push(<h1>LOADING</h1>)
     }
+    const style = {
+
+
+      margin: 20,
+      textAlign: 'center',
+      display: 'inline-block',
+    };
     return (
       <div>
-        <Table
-          selectable={false}
-          multiSelectable={false}
-          >
-          <TableHeader
-            displaySelectAll={false}
-            adjustForCheckbox={false}
+        <Paper zDepth={5} style={style}>
+          <Table
+            selectable={false}
+            multiSelectable={false}
             >
-            <TableRow>
-              <TableHeaderColumn>description</TableHeaderColumn>
-              <TableHeaderColumn>price</TableHeaderColumn>
-              <TableHeaderColumn>id</TableHeaderColumn>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {rows}
-          </TableBody>
-        </Table>
+            <TableHeader
+              displaySelectAll={false}
+              adjustForCheckbox={false}
+              >
+              <TableRow>
+                <TableHeaderColumn>description</TableHeaderColumn>
+                <TableHeaderColumn>price</TableHeaderColumn>
+                <TableHeaderColumn>id</TableHeaderColumn>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {rows}
+            </TableBody>
+          </Table>
+      </Paper>
       </div>
     );
   }
