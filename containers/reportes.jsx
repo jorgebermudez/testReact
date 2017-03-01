@@ -36,6 +36,7 @@ class VentaTable extends Component {
             <TableRow>
               <TableHeaderColumn>description</TableHeaderColumn>
               <TableHeaderColumn>price</TableHeaderColumn>
+              <TableHeaderColumn>id</TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody>

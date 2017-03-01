@@ -15,7 +15,7 @@ import theme from '../src/material_ui_raw_theme_file'
 
 class App extends Component {
   render() {
-    const { todos, actions } = this.props;
+    const { actions } = this.props;
     return (
       <div>
         <MuiThemeProvider muiTheme={theme}>
@@ -30,13 +30,11 @@ class App extends Component {
 }
 
 App.propTypes = {
-  todos: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
   return {
-    todos: state.todos,
     ventas: state.ventas,
     pagos: state.pagos
   };

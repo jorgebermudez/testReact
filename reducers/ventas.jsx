@@ -9,7 +9,7 @@ const initialStateVentas = [
   {description: "asus sen phone", price: "$29.99", id:"3"},
   {description: "dist", price: "$99.99" , id:"4"},
   {description: "casa", price: "$399.99", id:"5"},
-  {description: "perro", price: "$199.99" , id:"7"}
+  {description: "perro", price: "$199.99" , id:"99"}
 ];
 
 
@@ -22,7 +22,10 @@ export default function ventas(state = initialStateVentas, action) {
     copy.push({
               description: action.description,
               price: action.price,
-              id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1
+              //arr.reduce(callback, [initialValue])
+              // the function reduce is a array funcion, it doesn't have relation with reducers
+              //this parameter todo es a item to the element initialStateVentas
+              id: state.reduce((maxId, venta) => Math.max(venta.id, maxId), -1) + 1
             });
     // retornamos el nuevo state
     return copy;

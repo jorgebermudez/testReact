@@ -2,12 +2,6 @@
 // poder combinar reducers
 import { combineReducers } from 'redux';
 
-const initialStatePagos = [
-  {name: "SamsungGalaxi", mount: "$49.99", id:"99"},
-  {name: "iphone"       , mount: "$9.99",  id:"100"},
-  {name: "asus"         , mount: "$29.99", id:"101"}
-];
-
 export default function pagos(state = [], action) {
   switch(action.type) {
   case 'ADD_PAGO':
@@ -17,7 +11,7 @@ export default function pagos(state = [], action) {
     copy.push({
               name: action.name,
               mount: action.mount,
-              id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1
+              id: state.reduce((maxId, pago) => Math.max(pago.id, maxId), -1) + 1
             });
     // retornamos el nuevo state
     return copy;

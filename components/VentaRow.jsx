@@ -12,6 +12,8 @@ export default class ProductRow extends React.Component {
       <TableRow>
         <TableRowColumn>{ product.description }</TableRowColumn>
         <TableRowColumn>{ this.props.product.price }</TableRowColumn>
+        <TableRowColumn>{ this.props.product.id }</TableRowColumn>
+
       </TableRow>
     );
   }
