@@ -1,15 +1,28 @@
-# react-redux-material_ui-boilerplate
-A boilerplate for React + Redux + Material UI + ES6 syntax applications. This boilerplate includes the following tools and frameworks:
+# Objetivo
 
-* [React](https://facebook.github.io/react/)
-* [Redux](http://redux.js.org/)
-* [Material UI](http://material-ui.com/#/)
-* [webpack](https://webpack.github.io/)
-* [Babel](https://babeljs.io/)
-* [ESLint](http://eslint.org/)
+El objetivo es generar un ejercicio que se puede resolver en no más de 3 días, con el cual se llegue a realizar una aplicación funcional y por ende aprender (conocer) react y su stack asociado.  
 
 
+# Ejercicio:
+Crear un sistema básico de ventas y pagos.
+El mismo debe contar con:
+Una pantalla para registrar las ventas
+Una pantalla para registrar los pagos
+Una pantalla de reporte, que liste las ventas y pagos realizados
 
+Las transacciones deberán ser gestionadas utilizando las facultades provistas por Redux (stores, reducers, ... )
+
+# Tecnologías a utilizar.
+Para el ejercicio descrito se debe utilizar el React.js, junto con Redux.
+Se deberá usar Webpack para generar el bundle, así como librerías para la traducción a javascript puro. Respecto a esto último, se podrá utilizar un boilerplate como punto de partida, tal como https://github.com/werein/react
+Para mantener un estilo uniforme, deberá utilizar componentes de Material.
+
+##Tiempos
+El ejercicio deberá ser completado en no más de 3 días
+
+
+
+# Installation
 
 ## Package installation
 ```bash
@@ -32,4 +45,3 @@ To put compiled files into `static` directory, type the following command.
 ```bash
 $ npm run build
 ```
-

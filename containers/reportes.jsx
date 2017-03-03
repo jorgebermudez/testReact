@@ -26,8 +26,6 @@ class VentaTable extends Component {
       rows.push(<h1>LOADING</h1>)
     }
     const style = {
-
-
       margin: 20,
       textAlign: 'center',
       display: 'inline-block',
